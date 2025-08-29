@@ -19,6 +19,9 @@ footer {
   justify-content: center;
   position: relative;
 }
+.topBackground {
+  width: 100%;
+}
 .topBackground img {
   position: absolute;
   top: 0;
@@ -131,7 +134,8 @@ footer {
 .heroRight {
   display: flex;
   flex-direction: column;
-  width: 482px;
+  /*width: 482px;*/
+  width: 100%;
   height: 406px;
   gap: 20px;
 }
@@ -150,7 +154,7 @@ footer {
   display: flex;
   flex-direction: row;
   position: relative;
-  gap: 200px;
+  gap: 160px;
   top: 80px;
   left: 44px;
 }
@@ -490,6 +494,7 @@ form {
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .title {
   padding: 10px;
@@ -503,7 +508,7 @@ form {
 #budget,
 #country {
   height: 44px;
-  width: 186px;
+  width: 100%;
   border-radius: 5px;
   border: #e6e8f2 1px solid;
   padding: 10px;
@@ -514,10 +519,11 @@ form {
   border: 1px;
   padding: 10px;
   gap: 10px;
+  width: 100%;
 }
 #email {
   height: 44px;
-  width: 392px;
+  width: 100%;
   border-radius: 5px;
   border: #e6e8f2 1px solid;
   padding: 10px;
@@ -537,6 +543,7 @@ form {
   border-radius: 5px;
   border: 1px;
   padding: 10px 16px 10px 10px;
+  width: 100%;
 }
 .infoArea {
   display: flex;
@@ -547,7 +554,7 @@ form {
   border: #e6e8f2 1px solid;
   padding: 10px;
   color: #828282;
-  width: 90%;
+  width: 100%;
   height: 150px;
 }
 .formGroup {
@@ -658,296 +665,4 @@ footer {
   display: flex;
   gap: 10px;
   color: #677788;
-}
-
-@media (min-width: 1024px) {
-  a:hover {
-    animation: hover 1s 0.3s forwards;
-  }
-  a:not(:hover) {
-    animation: fadeOne ease-in 0.5s forwards;
-  }
-  @keyframes hover {
-    from {
-      color: #677788;
-      text-shadow: none;
-    }
-    to {
-      color: #2476ff;
-      text-shadow: black;
-    }
-  }
-  @keyframes fadeOne {
-    from {
-      color: #2476ff;
-      text-shadow: black;
-    }
-    to {
-      color: #677788;
-      text-shadow: none;
-    }
-  }
-  .navBars {
-    display: none;
-  }
-  .navOne,
-  .navTwo {
-    display: flex;
-    gap: 49px;
-  }
-  .google,
-  .asana,
-  .weave,
-  .google-ads {
-    position: relative;
-    animation: slideLeft 1.2s ease-out forwards;
-  }
-  @keyframes slideLeft {
-    from {
-      transform: translateX(100vw);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  .atlassian,
-  .paypal,
-  .calendar {
-    position: relative;
-    animation: slideUp 1.2s ease-out forwards;
-  }
-  @keyframes slideUp {
-    from {
-      transform: translateY(100vw);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  .pricing:hover {
-    animation: shadow 1s forwards;
-  }
-  .pricing:not(:hover) {
-    animation: fade 0.5s forwards;
-  }
-
-  @keyframes shadow {
-    from {
-      box-shadow: none;
-    }
-    to {
-      box-shadow: black;
-    }
-  }
-  @keyframes fade {
-    from {
-      box-shadow: black;
-    }
-    to {
-      box-shadow: none;
-    }
-  }
-  .buyNow:hover,
-  .heroButton:hover,
-  .pricingVideoButton button:hover,
-  .submitButton:hover {
-    animation: colorShift 0.8s forwards;
-  }
-  .buyNow:not(:hover),
-  .heroButton:not(:hover),
-  .pricingVideoButton button:not(:hover),
-  .submitButton:not(:hover) {
-    animation: shiftBack 0.8s forwards;
-  }
-  @keyframes colorShift {
-    from {
-      background-color: #2476ff;
-      color: #ffffff;
-    }
-    to {
-      background-color: #ffffff;
-      color: #2476ff;
-    }
-  }
-  @keyframes shiftBack {
-    from {
-      background-color: #ffffff;
-      color: #2476ff;
-    }
-    to {
-      background-color: #2476ff;
-      color: #ffffff;
-    }
-  }
-}
-
-@media (max-width: 1023px) {
-  @media (min-width: 768px) {
-  }
-  .navBars {
-    width: 18px;
-    height: 20px;
-    color: #677788;
-    appearance: none;
-  }
-  .nav nav,
-  .nav .buyNow {
-    display: none;
-  }
-  .heroSection {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .pricing {
-    align-items: center;
-    width: -webkit-fill-available;
-  }
-  .pricingLine {
-    width: -webkit-fill-available;
-    height: 1px;
-    background-color: #8d8d8d;
-  }
-  .pricingTable {
-    flex-direction: column;
-    align-items: center;
-  }
-  .pricingHeader {
-    align-items: center;
-  }
-  .hireUs {
-    flex-direction: column;
-  }
-  .hireLeft {
-    flex-flow: row;
-  }
-  .footerNav {
-    display: flex;
-    flex-direction: column;
-    gap: 49px;
-  }
-  .navOne {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 80px;
-  }
-  .navTwo {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 80px;
-  }
-  .rowOne,
-  .rowTwo {
-    justify-content: space-evenly;
-  }
-}
-@media (max-width: 767px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .rowOne {
-    flex-direction: column;
-  }
-  .rowTwo {
-    flex-direction: column;
-  }
-  .frontTitle {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .bulletList {
-    display: flex;
-    flex-direction: column;
-    padding-left: 34px;
-    padding-right: 34px;
-    gap: 17px;
-  }
-  .bullet {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  .rightWing,
-  .leftWing {
-    display: none;
-  }
-  .pricingTable {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .hireLeft {
-    flex-direction: column;
-  }
-  .hireTitle {
-    align-items: center;
-  }
-  .hirePhrase {
-    display: flex;
-    align-items: center;
-  }
-  .hireBottom {
-    align-items: center;
-  }
-  .hirePhrase {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-  }
-  .name {
-    flex-direction: column;
-  }
-  .dropDown {
-    flex-direction: column;
-  }
-  #nameFirst,
-  #nameLast,
-  #budget,
-  #country {
-    width: 100%;
-  }
-  .footer {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .navOne {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .navTwo {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-  }
-  .companyNav,
-  .featureNav,
-  .documentationNav,
-  .resourcesNav {
-    align-items: center;
-    justify-content: center;
-  }
-
-  .companyNav nav,
-  .featureNav nav,
-  .documentationNav nav,
-  .resourcesNav nav {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .about {
-    align-items: center;
-  }
 }
